@@ -9,7 +9,7 @@
 </head>
 <body>
     <div layout:fragment="content">
-        <a th:href="@{'/'+${title}}" class="btn btn-default">もう一回</a>
+        <a th:href="@{'/'+${title}}" class="btn btn-default" style="margin:8px;">もう一回</a>
         <div style="margin:16px;">
             <span th:each="item : ${result.resultPhraseList}">
                 <span th:text="${item}"></span>
