@@ -7,6 +7,20 @@ import java.util.List;
  */
 public interface ISong {
 
+    // TODO: thymeleaf側で使うためにやむなく定義。他の方法考える
+    /**
+     * クラス名を取得します。
+     * @return クラス名
+     */
+    String getClassName();
+
+    /**
+     * 歌の名前を取得します。
+     *
+     * @return 歌名
+     */
+    String getName();
+
     /**
      * 使用フレーズリストを取得します。
      *

@@ -1,5 +1,6 @@
 package com.ushibutatory.zundoko.controller;
 
+import com.ushibutatory.zundoko.model.Album;
 import com.ushibutatory.zundoko.service.ZundokoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,7 +19,8 @@ public class IndexController {
     ZundokoService _zundokoService;
 
     @RequestMapping(value = "", method = RequestMethod.GET)
-    public String root() {
+    public String root(Model model) {
+        model.addAttribute("songs", Album.getInstance().findAll());
         return "index";
     }
 

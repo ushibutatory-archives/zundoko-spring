@@ -5,27 +5,27 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * ずんどこ節
+ * Thrill / 布袋寅泰
  */
-public class ZundokoBushi extends AbstractSong {
+public class Thrill extends AbstractSong {
 
     @Override
     public String getName() {
-        return "ズンドコ節";
+        return "Thrill";
     }
 
     @Override
     protected List<String> _createUsingPhrases() {
-        return new ArrayList<>(Arrays.asList("ズン", "ドコ"));
+        return new ArrayList<>(Arrays.asList("ベビ", "ベイビ", "ベイベー"));
     }
 
     @Override
     protected List<Integer> _createCompletePhraseIndexes() {
-        return new ArrayList<>(Arrays.asList(0, 0, 0, 0, 1));
+        return new ArrayList<>(Arrays.asList(0, 0, 1, 1, 1, 1, 2));
     }
 
     @Override
     protected String _createShoutPhrase() {
-        return "キヨシ！";
+        return "俺のすべては　おまえのものさ";
     }
 }

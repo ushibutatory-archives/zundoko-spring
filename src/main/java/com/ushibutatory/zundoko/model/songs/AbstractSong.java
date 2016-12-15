@@ -15,12 +15,29 @@ public abstract class AbstractSong implements ISong {
     private String _shout;
 
     /**
+     * クラス名を取得します。
+     * @return クラス名
+     */
+    @Override
+    public String getClassName() {
+        return this.getClass().getSimpleName();
+    }
+
+    /**
+     * 歌の名前を取得します。
+     *
+     * @return 歌名
+     */
+    public abstract String getName();
+
+    /**
      * 使用フレーズリストを取得します。
+     *
      * @return 使用フレーズリスト
      */
     @Override
     public List<String> getUsingPhrases() {
-        if(this._usingPhrases == null){
+        if (this._usingPhrases == null) {
             // 初回生成
             this._usingPhrases = this._createUsingPhrases();
         }
@@ -29,6 +46,7 @@ public abstract class AbstractSong implements ISong {
 
     /**
      * 完成フレーズリストを取得します。
+     *
      * @return 完成フレーズリスト
      */
     @Override
@@ -44,6 +62,7 @@ public abstract class AbstractSong implements ISong {
 
     /**
      * 完成フレーズ数を取得します。
+     *
      * @return 完成フレーズ数
      */
     @Override
@@ -53,6 +72,7 @@ public abstract class AbstractSong implements ISong {
 
     /**
      * 決め台詞を取得します。
+     *
      * @return 決め台詞
      */
     @Override
@@ -65,6 +85,7 @@ public abstract class AbstractSong implements ISong {
 
     /**
      * フレーズが完成しているかどうかを取得します。
+     *
      * @param phrases フレーズリスト
      * @return 完成しているかどうか
      */
@@ -89,18 +110,21 @@ public abstract class AbstractSong implements ISong {
 
     /**
      * 使用フレーズリストを生成します。
+     *
      * @return 使用フレーズリスト
      */
     protected abstract List<String> _createUsingPhrases();
 
     /**
      * 完成フレーズのインデックスリストを生成します。
+     *
      * @return 完成フレーズのインデックスリスト
      */
     protected abstract List<Integer> _createCompletePhraseIndexes();
 
     /**
      * 決め台詞を生成します。
+     *
      * @return 決め台詞
      */
     protected abstract String _createShoutPhrase();

@@ -9,7 +9,9 @@
 </head>
 <body>
     <div layout:fragment="content">
-        <a href="/z" class="btn btn-default">ズンドコキヨシ</a>
+        <div th:each="song : ${songs}">
+            <a th:href="@{'/' + ${song.className}}" th:text="${song.name}" class="btn btn-default" style="margin:8px;"></a>
+        </div>
     </div>
 </body>
 </html>
