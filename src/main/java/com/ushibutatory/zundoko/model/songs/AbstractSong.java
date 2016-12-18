@@ -66,7 +66,7 @@ public abstract class AbstractSong implements ISong {
      * @return 完成フレーズ数
      */
     @Override
-    public Integer getCompletePhraseCount() {
+    public Integer getCompletePhrasesCount() {
         return this._completePhrases.size();
     }
 

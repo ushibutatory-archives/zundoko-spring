@@ -55,7 +55,7 @@ public class House {
                         result.setCount(count);
                         break;
                     } else {
-                        if (phraseList.size() > song.getCompletePhraseCount()) {
+                        if (phraseList.size() > song.getCompletePhrasesCount()) {
                             phraseList.remove(0);
                         }
                     }

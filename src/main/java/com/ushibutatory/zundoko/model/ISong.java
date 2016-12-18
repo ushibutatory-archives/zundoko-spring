@@ -43,7 +43,7 @@ public interface ISong {
      *
      * @return 完成フレーズ数
      */
-    Integer getCompletePhraseCount();
+    Integer getCompletePhrasesCount();
 
     /**
      * 決め台詞を取得します。
