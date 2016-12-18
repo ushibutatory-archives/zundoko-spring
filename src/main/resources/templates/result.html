@@ -9,13 +9,15 @@
 </head>
 <body>
     <div layout:fragment="content">
-        <div>
-            <a th:href="@{'/'+${title}}" class="btn btn-default" style="margin:8px;">もう一回</a>
+        <div class="row">
+            <div class="col-xs-12">
+                <a th:href="@{'/'+${title}}" class="btn btn-default" style="margin:8px;">もう一回</a>
+            </div>
         </div>
-        <div style="margin:16px;">
-            <span th:each="item : ${result.results}">
-                <span th:text="${item}"></span>
-            </span>
+        <div class="row" style="margin:16px;">
+            <div class="col-xs-12">
+                <span th:each="item : ${result.results}"><span th:remove="tag" th:text="${item}"></span></span>
+            </div>
         </div>
     </div>
 </body>
