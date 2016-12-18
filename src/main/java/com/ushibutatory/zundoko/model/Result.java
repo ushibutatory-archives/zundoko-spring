@@ -13,22 +13,18 @@ public class Result {
 
     private int count;
 
-    private List<String> resultPhraseList;
+    private List<String> results;
 
     public Result() {
-        this.resultPhraseList = new ArrayList<>();
+        this.results = new ArrayList<>();
     }
 
     public void addPhrase(String phrase) {
-        this.resultPhraseList.add(phrase);
-    }
-
-    public void setCount(int count) {
-        this.count = count;
+        this.results.add(phrase);
     }
 
     public String phrases() {
-        return String.join("", this.resultPhraseList);
+        return String.join("", this.results);
     }
 
 }

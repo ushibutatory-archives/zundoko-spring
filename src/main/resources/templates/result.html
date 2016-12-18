@@ -13,7 +13,7 @@
             <a th:href="@{'/'+${title}}" class="btn btn-default" style="margin:8px;">もう一回</a>
         </div>
         <div style="margin:16px;">
-            <span th:each="item : ${result.resultPhraseList}">
+            <span th:each="item : ${result.results}">
                 <span th:text="${item}"></span>
             </span>
         </div>
