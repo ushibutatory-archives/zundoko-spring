@@ -16,9 +16,7 @@
         </div>
         <div class="row" style="margin:16px;">
             <div class="col-xs-12">
-                <span th:each="item : ${result.results}">
-                    <span th:remove="tag" th:text="${item}"></span>
-                </span>
+                <span th:each="item : ${result.results}"><span th:remove="tag" th:text="${item}"></span></span>
             </div>
         </div>
     </div>
