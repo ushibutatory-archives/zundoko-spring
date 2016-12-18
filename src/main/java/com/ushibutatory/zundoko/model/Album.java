@@ -32,6 +32,7 @@ public class Album {
             List<ISong> songs = Arrays.asList(
 //                    new Thrill(),
 //                    new Ultrasoul(),
+                    new SoranBushi(),
                     new ZundokoBushi()
             );
 

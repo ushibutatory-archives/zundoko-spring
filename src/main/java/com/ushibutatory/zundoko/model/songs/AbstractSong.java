@@ -36,7 +36,7 @@ public abstract class AbstractSong implements ISong {
      * @return 使用フレーズリスト
      */
     @Override
-    public List<String> getUsingPhrases() {
+    public List<String> getPhrases() {
         if (this._usingPhrases == null) {
             // 初回生成
             this._usingPhrases = this._createUsingPhrases();
@@ -54,7 +54,7 @@ public abstract class AbstractSong implements ISong {
         if (this._completePhrases == null) {
             this._completePhrases = this._createCompletePhraseIndexes()
                     .stream()
-                    .map(i -> this.getUsingPhrases().get(i))
+                    .map(i -> this.getPhrases().get(i))
                     .collect(Collectors.toList());
         }
         return this._completePhrases;
@@ -66,7 +66,7 @@ public abstract class AbstractSong implements ISong {
      * @return 完成フレーズ数
      */
     @Override
-    public Integer getCompletePhraseCount() {
+    public Integer getCompletePhrasesCount() {
         return this._completePhrases.size();
     }
 
@@ -76,7 +76,7 @@ public abstract class AbstractSong implements ISong {
      * @return 決め台詞
      */
     @Override
-    public String getShoutPhrase() {
+    public String getShout() {
         if (this._shout == null) {
             this._shout = this._createShoutPhrase();
         }

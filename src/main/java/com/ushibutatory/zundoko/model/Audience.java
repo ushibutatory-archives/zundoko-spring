@@ -51,7 +51,7 @@ public class Audience {
             this._isSatisfied = true;
 
             // 決め台詞を返す
-            return this._song.getShoutPhrase();
+            return this._song.getShout();
         }
     }
 }

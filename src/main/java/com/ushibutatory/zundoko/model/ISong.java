@@ -1,5 +1,7 @@
 package com.ushibutatory.zundoko.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.List;
 
 /**
@@ -7,11 +9,12 @@ import java.util.List;
  */
 public interface ISong {
 
-    // TODO: thymeleaf側で使うためにやむなく定義。他の方法考える
     /**
      * クラス名を取得します。
+     *
      * @return クラス名
      */
+    // TODO: thymeleaf側で使うためにやむなく定義。他の方法考える
     String getClassName();
 
     /**
@@ -26,7 +29,7 @@ public interface ISong {
      *
      * @return 使用フレーズリスト
      */
-    List<String> getUsingPhrases();
+    List<String> getPhrases();
 
     /**
      * 完成フレーズリストを取得します。
@@ -40,14 +43,14 @@ public interface ISong {
      *
      * @return 完成フレーズ数
      */
-    Integer getCompletePhraseCount();
+    Integer getCompletePhrasesCount();
 
     /**
      * 決め台詞を取得します。
      *
      * @return 決め台詞
      */
-    String getShoutPhrase();
+    String getShout();
 
     /**
      * フレーズが完成しているかどうかを取得します。
@@ -55,5 +58,6 @@ public interface ISong {
      * @param phrases フレーズリスト
      * @return 完成しているかどうか
      */
+    @JsonIgnore
     Boolean isCompleted(List<String> phrases);
 }
