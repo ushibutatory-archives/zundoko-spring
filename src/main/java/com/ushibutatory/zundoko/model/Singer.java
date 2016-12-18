@@ -33,7 +33,7 @@ public class Singer {
             // TODO 適切な例外処理
             throw new Exception("Singer has no song.");
         } else {
-            return this.song.getUsingPhrases().get((int) (Math.random() * this.song.getUsingPhrases().size()));
+            return this.song.getPhrases().get((int) (Math.random() * this.song.getPhrases().size()));
         }
     }
 }
