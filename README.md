@@ -6,4 +6,14 @@
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 # 実行環境
-https://zundoko-spring.herokuapp.com/
+
+## 画面
+- https://zundoko-spring.herokuapp.com/
+
+## API
+### 曲一覧
+- https://zundoko-spring.herokuapp.com/api/album/all
+
+### 実行例
+- https://zundoko-spring.herokuapp.com/api/zundoko/z
+- https://zundoko-spring.herokuapp.com/api/zundoko/s
