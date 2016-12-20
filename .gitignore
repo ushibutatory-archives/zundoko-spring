@@ -44,3 +44,8 @@ transaction-logs
 /bin/
 *.test
 *.swp
+
+# gradle
+gradle
+gradlew
+gradlew.bat
