@@ -26,6 +26,6 @@ public class ZundokoBushi extends AbstractSong {
 
     @Override
     protected String _createShoutPhrase() {
-        return "キヨシ！";
+        return "＼キ・ヨ・シ！／";
     }
 }
