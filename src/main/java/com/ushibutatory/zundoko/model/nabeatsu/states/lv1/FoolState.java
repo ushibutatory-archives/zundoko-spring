@@ -18,10 +18,10 @@ public class FoolState extends BaseState {
      */
     private enum DigitPartType {
         Unknown,
-        One,
-        Ten,
-        Hundred,
-        Thousand,
+        一,
+        十,
+        百,
+        千,
     }
 
     /**
@@ -147,7 +147,7 @@ public class FoolState extends BaseState {
                         break;
                     case 1:
                         switch (this.getDigitPart(digit)) {
-                            case One:
+                            case 一:
                                 switch (this.getDigitScale(digit)) {
                                     case 兆:
                                     case 京:
@@ -180,7 +180,7 @@ public class FoolState extends BaseState {
                         break;
                     case 6:
                         switch (this.getDigitPart(digit)) {
-                            case Hundred:
+                            case 百:
                                 result = "ろっ";
                                 break;
                             default:
@@ -193,8 +193,8 @@ public class FoolState extends BaseState {
                         break;
                     case 8:
                         switch (this.getDigitPart(digit)) {
-                            case Hundred:
-                            case Thousand:
+                            case 百:
+                            case 千:
                                 result = "はっ";
                                 break;
                             default:
@@ -220,7 +220,7 @@ public class FoolState extends BaseState {
     private String toFoolDigit(int number, int digit) {
         String result = "";
         switch (this.getDigitPart(digit)) {
-            case One:
+            case 一:
                 switch (this.getDigitScale(digit)) {
                     case 万:
                         result = "まん";
@@ -277,7 +277,7 @@ public class FoolState extends BaseState {
                         break;
                 }
                 break;
-            case Ten:
+            case 十:
                 switch (number) {
                     case 0:
                         break;
@@ -298,7 +298,7 @@ public class FoolState extends BaseState {
                         break;
                 }
                 break;
-            case Hundred:
+            case 百:
                 switch (number) {
                     case 0:
                         break;
@@ -314,7 +314,7 @@ public class FoolState extends BaseState {
                         break;
                 }
                 break;
-            case Thousand:
+            case 千:
                 switch (number) {
                     case 0:
                         break;
@@ -342,16 +342,16 @@ public class FoolState extends BaseState {
         DigitPartType value;
         switch (digit % 4) {
             case 1:
-                value = DigitPartType.One;
+                value = DigitPartType.一;
                 break;
             case 2:
-                value = DigitPartType.Ten;
+                value = DigitPartType.十;
                 break;
             case 3:
-                value = DigitPartType.Hundred;
+                value = DigitPartType.百;
                 break;
             case 0:
-                value = DigitPartType.Thousand;
+                value = DigitPartType.千;
                 break;
             default:
                 value = DigitPartType.Unknown;

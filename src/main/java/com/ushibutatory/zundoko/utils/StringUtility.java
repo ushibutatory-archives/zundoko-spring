@@ -53,7 +53,7 @@ public final class StringUtility {
                     block.append(text.charAt(i));
                     if (block.length() >= length) {
                         result.add(block.toString());
-                        block.delete(0, block.length() - 1);
+                        block.delete(0, block.length());
                     }
                 }
                 if (block.length() > 0) {
@@ -67,7 +67,7 @@ public final class StringUtility {
                     block.insert(0, text.charAt(i));
                     if (block.length() >= length) {
                         result.add(0, block.toString());
-                        block.delete(0, block.length() - 1);
+                        block.delete(0, block.length());
                     }
                 }
                 if (block.length() > 0) {
