@@ -140,6 +140,7 @@ public class FoolState extends BaseState {
                         result = "きゅう";
                         break;
                 }
+                break;
             default:
                 switch (number) {
                     case 0:
