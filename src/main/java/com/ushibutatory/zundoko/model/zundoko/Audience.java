@@ -1,4 +1,4 @@
-package com.ushibutatory.zundoko.model;
+package com.ushibutatory.zundoko.model.zundoko;
 
 /**
  * 観客クラス

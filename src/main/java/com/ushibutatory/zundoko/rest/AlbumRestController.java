@@ -1,7 +1,7 @@
 package com.ushibutatory.zundoko.rest;
 
-import com.ushibutatory.zundoko.model.Album;
-import com.ushibutatory.zundoko.model.ISong;
+import com.ushibutatory.zundoko.model.zundoko.Album;
+import com.ushibutatory.zundoko.model.zundoko.ISong;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

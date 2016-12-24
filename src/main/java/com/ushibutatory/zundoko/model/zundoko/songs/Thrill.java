@@ -1,4 +1,4 @@
-package com.ushibutatory.zundoko.model.songs;
+package com.ushibutatory.zundoko.model.zundoko.songs;
 
 import java.util.ArrayList;
 import java.util.Arrays;

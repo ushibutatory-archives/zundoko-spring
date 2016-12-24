@@ -1,6 +1,6 @@
-package com.ushibutatory.zundoko.model;
+package com.ushibutatory.zundoko.model.zundoko;
 
-import com.ushibutatory.zundoko.model.songs.*;
+import com.ushibutatory.zundoko.model.zundoko.songs.*;
 
 import java.util.Arrays;
 import java.util.List;
@@ -14,7 +14,7 @@ public class Album {
     /**
      * singletonインスタンス
      */
-    private static Album _album;
+    private static Album _album = new Album();
 
     /**
      * 歌リスト
@@ -22,26 +22,24 @@ public class Album {
     private List<ISong> _songs;
 
     /**
+     * コンストラクタ
+     */
+    private Album() {
+        // 歌リストを生成
+        this._songs = Arrays.asList(
+//                    new Thrill(),
+//                    new Ultrasoul(),
+                new SoranBushi(),
+                new ZundokoBushi()
+        );
+    }
+
+    /**
      * インスタンスを取得します。
      *
      * @return アルバムインスタンス
      */
     public static Album getInstance() {
-        if (_album == null) {
-            // 歌リストを生成
-            List<ISong> songs = Arrays.asList(
-//                    new Thrill(),
-//                    new Ultrasoul(),
-                    new SoranBushi(),
-                    new ZundokoBushi()
-            );
-
-            // インスタンスを生成
-            _album = new Album();
-
-            // 歌リストを設定
-            _album._songs = songs;
-        }
         return _album;
     }
 
