@@ -1,6 +1,6 @@
-package com.ushibutatory.zundoko.model.songs;
+package com.ushibutatory.zundoko.model.zundoko.songs;
 
-import com.ushibutatory.zundoko.model.ISong;
+import com.ushibutatory.zundoko.model.zundoko.ISong;
 
 import java.util.List;
 import java.util.stream.Collectors;

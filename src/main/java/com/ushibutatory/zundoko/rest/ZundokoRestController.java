@@ -1,6 +1,6 @@
 package com.ushibutatory.zundoko.rest;
 
-import com.ushibutatory.zundoko.model.*;
+import com.ushibutatory.zundoko.model.zundoko.Result;
 import com.ushibutatory.zundoko.service.ZundokoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

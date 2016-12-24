@@ -1,6 +1,6 @@
-package com.ushibutatory.zundoko.model;
+package com.ushibutatory.zundoko.model.zundoko;
 
-import com.ushibutatory.zundoko.model.songs.*;
+import com.ushibutatory.zundoko.model.zundoko.songs.*;
 
 import java.util.Arrays;
 import java.util.List;

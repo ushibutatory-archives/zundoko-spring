@@ -1,6 +1,6 @@
 package com.ushibutatory.zundoko.service;
 
-import com.ushibutatory.zundoko.model.*;
+import com.ushibutatory.zundoko.model.zundoko.*;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -9,9 +9,9 @@ import java.util.Optional;
  * ズンドコサービス
  */
 @Service
-public class ZundokoService {
+public class ZundokoService extends BaseService {
 
-    public Result execute(String title, Optional<Integer> count){
+    public Result execute(String title, Optional<Integer> count) {
         try {
             // 歌手を生成
             Singer singer = new Singer();

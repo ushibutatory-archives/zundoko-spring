@@ -1,6 +1,6 @@
 package com.ushibutatory.zundoko.controller;
 
-import com.ushibutatory.zundoko.model.Album;
+import com.ushibutatory.zundoko.model.zundoko.Album;
 import com.ushibutatory.zundoko.service.ZundokoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
