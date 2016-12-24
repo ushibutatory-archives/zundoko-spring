@@ -1,13 +1,12 @@
 package com.ushibutatory.zundoko.controller;
 
+import com.ushibutatory.zundoko.form.NabeAtsuForm;
 import com.ushibutatory.zundoko.model.zundoko.Album;
 import com.ushibutatory.zundoko.service.ZundokoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
@@ -25,9 +24,16 @@ public class IndexController {
     }
 
     @RequestMapping(value = "{title}", method = RequestMethod.GET)
-    public String get(Model model, @PathVariable String title) {
+    public String zundoko(Model model, @PathVariable String title) {
         model.addAttribute("title", title);
         model.addAttribute("result", this._zundokoService.execute(title, Optional.of(0)));
-        return "result";
+        return "zundoko";
+    }
+
+    @RequestMapping(value = "nabeatsu", method = RequestMethod.POST)
+    public String nabeatsu(Model model, @ModelAttribute NabeAtsuForm form) {
+        model.addAttribute("start", form.getStart());
+        model.addAttribute("count", form.getCount());
+        return "nabeatsu";
     }
 }

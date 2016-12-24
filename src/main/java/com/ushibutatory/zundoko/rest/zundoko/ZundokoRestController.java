@@ -1,4 +1,4 @@
-package com.ushibutatory.zundoko.rest;
+package com.ushibutatory.zundoko.rest.zundoko;
 
 import com.ushibutatory.zundoko.model.zundoko.Result;
 import com.ushibutatory.zundoko.service.ZundokoService;

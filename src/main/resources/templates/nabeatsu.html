@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf"
+      layout:decorator="layout">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>NabeAtsu</title>
+    <style type="text/css">
+        .lbl {
+            display: inline-block;
+            padding: 6px;
+            font-size: medium;
+            word-break: keep-all;
+        }
+    </style>
+</head>
+<body>
+    <div layout:fragment="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <a id="btnBack" href="/" class="btn btn-link" style="margin:8px">戻る</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>
+                    <span th:text="${start}"></span>から<span th:text="${count}"></span>個数えるよ
+                </h3>
+            </div>
+        </div>
+        <div class="row" style="margin:16px;">
+            <div class="col-xs-12">
+                <div>
+                    <span th:each="i : ${#numbers.sequence(start, start + count - 1)}" th:value="${i}" class="lbl"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script layout:fragment="scripts" type="text/javascript">
+        $(function() {
+            $(".lbl").each(function (i, element) {
+                setTimeout(function () {
+                    $.ajax({
+                        type: "get",
+                        url: "/api/nabeatsu/" + $(element).attr("value")
+                    }).done(function (data) {
+                        $(element).text(data.text);
+                        $("html,body").animate({
+                            scrollTop: $(element).offset().top
+                        });
+                    }).fail(function (data) {
+                        $(element).text("...");
+                    })
+                }, i * 1000
+                );
+            });
+        });
+    </script>
+</body>
+</html>
