@@ -28,6 +28,6 @@ public class IndexController {
     public String get(Model model, @PathVariable String title) {
         model.addAttribute("title", title);
         model.addAttribute("result", this._zundokoService.execute(title, Optional.of(0)));
-        return "result";
+        return "zundoko";
     }
 }
